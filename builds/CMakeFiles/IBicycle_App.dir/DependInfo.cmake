@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/user/Desktop/INTT-52_2/gmock-global/samples/main.cpp" "CMakeFiles/IBicycle_App.dir/samples/main.cpp.o" "gcc" "CMakeFiles/IBicycle_App.dir/samples/main.cpp.o.d"
+  "/Users/user/Desktop/gmock-exempel/samples/main.cpp" "CMakeFiles/IBicycle_App.dir/samples/main.cpp.o" "gcc" "CMakeFiles/IBicycle_App.dir/samples/main.cpp.o.d"
   )
 
 # Targets to which this target links.

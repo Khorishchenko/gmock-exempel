@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/user/Desktop/INTT-52_2/gmock-global
+CMAKE_SOURCE_DIR = /Users/user/Desktop/gmock-exempel
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/user/Desktop/INTT-52_2/gmock-global/builds
+CMAKE_BINARY_DIR = /Users/user/Desktop/gmock-exempel/builds
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/Desktop/INTT-52_2/gmock-global/builds/CMakeFiles /Users/user/Desktop/INTT-52_2/gmock-global/builds//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/Desktop/gmock-exempel/builds/CMakeFiles /Users/user/Desktop/gmock-exempel/builds//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/Desktop/INTT-52_2/gmock-global/builds/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/user/Desktop/gmock-exempel/builds/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

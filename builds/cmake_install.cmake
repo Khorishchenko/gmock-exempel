@@ -1,4 +1,4 @@
-# Install script for directory: /Users/user/Desktop/INTT-52_2/gmock-global
+# Install script for directory: /Users/user/Desktop/gmock-exempel
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-build/cmake_install.cmake")
+  include("/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-build/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/user/Desktop/INTT-52_2/gmock-global/builds/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/user/Desktop/gmock-exempel/builds/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

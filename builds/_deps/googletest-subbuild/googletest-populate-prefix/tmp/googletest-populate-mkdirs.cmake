@@ -4,16 +4,16 @@
 cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
-  "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src"
-  "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-build"
-  "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix"
-  "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/tmp"
-  "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
-  "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src"
-  "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
+  "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src"
+  "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-build"
+  "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix"
+  "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/tmp"
+  "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
+  "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src"
+  "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/${subDir}")
 endforeach()

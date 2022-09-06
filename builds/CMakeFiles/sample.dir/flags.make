@@ -4,7 +4,7 @@
 # compile CXX with /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/user/Desktop/INTT-52_2/gmock-global/samples -isystem /Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src/googletest/include -isystem /Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src/googletest -isystem /Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src/googlemock/include -isystem /Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src/googlemock
+CXX_INCLUDES = -I/Users/user/Desktop/gmock-exempel/samples -isystem /Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src/googletest/include -isystem /Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src/googletest -isystem /Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src/googlemock/include -isystem /Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src/googlemock
 
 CXX_FLAGSarm64 =  -std=c++17  -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++17
 

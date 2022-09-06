@@ -5,7 +5,7 @@
 int main() {
     SampleBicycle bc;
 
-    Human people;
+    Human people(bc);
 
-    people.RideOn(bc);
+    people.RideOn();
 }

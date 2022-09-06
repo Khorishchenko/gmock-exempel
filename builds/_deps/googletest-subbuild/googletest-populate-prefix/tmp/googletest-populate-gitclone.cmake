@@ -3,21 +3,21 @@
 
 cmake_minimum_required(VERSION 3.5)
 
-if(EXISTS "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt" AND EXISTS "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt" AND
-  "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt")
+if(EXISTS "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt" AND EXISTS "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt" AND
+  "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt" IS_NEWER_THAN "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt")
   message(STATUS
     "Avoiding repeated git clone, stamp file is up to date: "
-    "'/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt'"
+    "'/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt'"
   )
   return()
 endif()
 
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E rm -rf "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src"
+  COMMAND ${CMAKE_COMMAND} -E rm -rf "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to remove directory: '/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src'")
+  message(FATAL_ERROR "Failed to remove directory: '/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src'")
 endif()
 
 # try the clone 3 times in case there is an odd git clone issue
@@ -27,7 +27,7 @@ while(error_code AND number_of_tries LESS 3)
   execute_process(
     COMMAND "/opt/homebrew/bin/git" 
             clone --no-checkout --config "advice.detachedHead=false" "https://github.com/google/googletest.git" "googletest-src"
-    WORKING_DIRECTORY "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps"
+    WORKING_DIRECTORY "/Users/user/Desktop/gmock-exempel/builds/_deps"
     RESULT_VARIABLE error_code
   )
   math(EXPR number_of_tries "${number_of_tries} + 1")
@@ -42,7 +42,7 @@ endif()
 execute_process(
   COMMAND "/opt/homebrew/bin/git" 
           checkout "release-1.12.1" --
-  WORKING_DIRECTORY "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src"
+  WORKING_DIRECTORY "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src"
   RESULT_VARIABLE error_code
 )
 if(error_code)
@@ -54,20 +54,20 @@ if(init_submodules)
   execute_process(
     COMMAND "/opt/homebrew/bin/git" 
             submodule update --recursive --init 
-    WORKING_DIRECTORY "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src"
+    WORKING_DIRECTORY "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src"
     RESULT_VARIABLE error_code
   )
 endif()
 if(error_code)
-  message(FATAL_ERROR "Failed to update submodules in: '/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-src'")
+  message(FATAL_ERROR "Failed to update submodules in: '/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-src'")
 endif()
 
 # Complete success, update the script-last-run stamp file:
 #
 execute_process(
-  COMMAND ${CMAKE_COMMAND} -E copy "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt" "/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt"
+  COMMAND ${CMAKE_COMMAND} -E copy "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitinfo.txt" "/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt"
   RESULT_VARIABLE error_code
 )
 if(error_code)
-  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/Users/user/Desktop/INTT-52_2/gmock-global/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt'")
+  message(FATAL_ERROR "Failed to copy script-last-run stamp file: '/Users/user/Desktop/gmock-exempel/builds/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-gitclone-lastrun.txt'")
 endif()
