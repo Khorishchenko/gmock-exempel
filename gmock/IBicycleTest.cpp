@@ -79,7 +79,6 @@ TEST(HumanTest, Color) {
       .Times(1)
       .WillRepeatedly(Return(true));
       
-
       Human painter(bc);
       painter.Color("red");
 }
