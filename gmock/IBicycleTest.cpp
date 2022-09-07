@@ -7,6 +7,7 @@ using ::testing::Gt;
 using ::testing::HasSubstr;
 using ::testing::Ne;
 using ::testing::Not;
+using ::testing::Return;
 
 class MockBicycle : public IBicycle {
  public:
@@ -42,18 +43,9 @@ TEST(HumanTest, EwistTheWheel) {
     painter.RideOn(); 
 }
 
-using ::testing::Return;
-
 TEST(HumanTest, WheelDiameter) {
 
     MockBicycle bc;
-
-    // EXPECT_CALL(bc, WheelDiameter(AllOf(
-    //     (testing::_, 20.0),
-    //     (testing::A<float>(), testing::A<float>()))))
-    // .Times(1)
-    // .WillRepeatedly(Return(true));
-
 
     EXPECT_CALL(bc, WheelDiameter(testing::_, 20.0))
       .Times(1)
@@ -61,14 +53,6 @@ TEST(HumanTest, WheelDiameter) {
 
     Human painter(bc);
     painter.RideWheelsDia(19.0, 20.0);
-
-
-     EXPECT_CALL(bc, WheelDiameter(testing::A<float>(), testing::A<float>()))
-      .Times(1)
-      .WillRepeatedly(Return(true));
-
-    Human painter2(bc);
-    painter2.RideWheelsDia(19.0, 20.0);
 }
 
 TEST(HumanTest, Color) {
@@ -81,4 +65,16 @@ TEST(HumanTest, Color) {
       
       Human painter(bc);
       painter.Color("red");
+}
+
+TEST(HumanTest, Price) {
+
+    MockBicycle bc;
+
+    EXPECT_CALL(bc, Price(testing::An<int>()))
+      .Times(1)
+      .WillRepeatedly(Return(true));
+
+       Human painter(bc);
+       painter.Price(100);
 }
